@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>VELORA Web Solution | Premium Brand Identity & Website Design Studio</title>
+    <meta name="description" content="VELORA crafts bespoke, high-performance web experiences that combine luxury design, advanced motion, and flawless frontend engineering. Elevating real estate, clinics, startups, and luxury brands.">
+    <meta name="keywords" content="web agency, premium website design, custom web development, UI/UX design, luxury branding, speed optimization, real estate web design, clinic websites, startup landing pages">
+    <meta name="author" content="VELORA Web Solution">
+    <link rel="canonical" href="https://velorawebsolution.com/">
+    
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/png" href="favicon/favicon.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://velorawebsolution.com/">
+    <meta property="og:title" content="VELORA Web Solution | Premium Brand Identity & Web Studio">
+    <meta property="og:description" content="Bespoke, high-performance web experiences combining luxury design and motion.">
+    <meta property="og:image" content="https://velorawebsolution.com/assets/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://velorawebsolution.com/">
+    <meta property="twitter:title" content="VELORA Web Solution | Premium Brand Identity & Web Studio">
+    <meta property="twitter:description" content="Bespoke, high-performance web experiences combining luxury design and motion.">
+    <meta property="twitter:image" content="https://velorawebsolution.com/assets/images/og-image.jpg">
+
+    <!-- Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Production Modular CSS Links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Icons CDN (Lucide Icons) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Schema.org Local Business Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "VELORA Web Solution",
+      "image": "https://velorawebsolution.com/assets/images/og-image.jpg",
+      "@id": "https://velorawebsolution.com/#agency",
+      "url": "https://velorawebsolution.com/",
+      "telephone": "+1-800-VELORA-W",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Creative Hub Suite 400",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "postalCode": "10001",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.7128,
+        "longitude": -74.0060
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/velora-web-solution-526574423?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+        "https://www.instagram.com/velora_webs_rr?igsh=MjU0YzB4dmljcHJp"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Premium Loader -->
+    <div class="preloader" role="status" aria-live="polite">
+        <div class="loader-logo-container">
+            <svg viewBox="0 0 100 100" class="loader-logo-svg" aria-hidden="true">
+                <path d="M22,25 L38,25 L50,56 L62,25 L78,25 L56,75 L44,75 Z" class="loader-outline-path" />
+            </svg>
+            <div class="loader-glow-spot"></div>
+        </div>
+        <div class="loader-progress-track" aria-hidden="true">
+            <div class="loader-progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-container" aria-hidden="true">
+        <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Ambient Dynamic Glows -->
+    <div class="ambient-glow" id="ambient-glow-1" aria-hidden="true"></div>
+    <div class="ambient-glow" id="ambient-glow-2" aria-hidden="true"></div>
+    
+    <!-- Background Canvas for Interactive Particles -->
+    <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="main-header" id="navbar">
+        <div class="header-container glass-nav">
+            <!-- Brand Logo -->
+            <a href="#" class="logo-wrapper" aria-label="VELORA Web Solution Home">
+                <span class="logo-text">VELORA</span>
+                <span class="logo-dot"></span>
+            </a>
+
+            <!-- Navigation Links (Desktop Only) -->
+            <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#work" class="nav-link">Showcase</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#process" class="nav-link">Process</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Action Controls -->
+            <div class="header-actions">
+                <!-- Theme Switcher -->
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle light and dark mode theme" title="Toggle Theme">
+                    <i data-lucide="moon" class="icon-moon" aria-hidden="true"></i>
+                    <i data-lucide="sun" class="icon-sun" aria-hidden="true"></i>
+                </button>
+
+                <!-- Premium CTA Button -->
+                <a href="contact.html" class="btn btn-primary btn-nav magnetic" data-magnetic-strength="0.15" aria-label="Connect and book call">
+                    <span class="btn-text">Connect</span>
+                    <span class="btn-glow"></span>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle main navigation mobile drawer">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Fullscreen Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay" aria-hidden="true">
+        <div class="mobile-menu-container">
+            <ul class="mobile-nav-list">
+                <li><a href="#services" class="mobile-nav-link">Services</a></li>
+                <li><a href="#work" class="mobile-nav-link">Showcase</a></li>
+                <li><a href="#about" class="mobile-nav-link">About</a></li>
+                <li><a href="#process" class="mobile-nav-link">Process</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-footer">
+                <p>velorawebsrr89@gmail.com</p>
+                <div class="mobile-social-links">
+                    <a href="https://www.linkedin.com/in/velora-web-solution-526574423?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/velora_webs_rr?igsh=MjU0YzB4dmljcHJp" target="_blank" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    </a>
+                    <a href="mailto:velorawebsrr89@gmail.com" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- SECTION 00 — HERO & PORTAL -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-layout-grid">
+                
+                <!-- Left Side: Copywriting & Actions (45%) -->
+                <div class="hero-left-content">
+                    <div class="hero-badge reveal-element">
+                        <span class="badge-dot" aria-hidden="true"></span>
+                        <span class="badge-text">Luxury Tech Web Studio</span>
+                    </div>
+                    
+                    <h1 class="hero-title reveal-element">
+                        We Design, Build &amp; <br>Scale Digital <span class="gradient-text">Impact.</span>
+                    </h1>
+                    
+                    <p class="hero-description reveal-element">
+                        We engineer custom, high-performance web experiences that combine luxury design aesthetics and performance logic for forward-thinking brands who refuse to look ordinary.
+                    </p>
+                    
+                    <div class="hero-actions reveal-element">
+                        <!-- Primary CTA -->
+                        <a href="contact.html" class="btn btn-primary btn-hero-primary magnetic" data-magnetic-strength="0.15">
+                            <span class="btn-text">Book Free Consultation</span>
+                            <span class="btn-glow"></span>
+                            <i data-lucide="arrow-right" class="icon-arrow" aria-hidden="true"></i>
+                        </a>
+                        <!-- Secondary CTA -->
+                        <a href="#work" class="btn btn-secondary btn-hero-secondary magnetic" data-magnetic-strength="0.1">
+                            <i data-lucide="play" class="icon-play" aria-hidden="true"></i>
+                            <span class="btn-text">View Our Work</span>
+                            <span class="btn-border-glow"></span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Section -->
+                    <div class="hero-trust reveal-element">
+                        <div class="avatar-stack" aria-hidden="true">
+                            <span class="avatar-item avatar-f1">R</span>
+                            <span class="avatar-item avatar-f2">V</span>
+                            <span class="avatar-item avatar-f3">S</span>
+                            <span class="avatar-item avatar-f4">A</span>
+                        </div>
+                        <div class="trust-text-block">
+                            <p class="trust-title">Trusted by growing businesses</p>
+                            <p class="trust-meta">Growing every month: <span class="counter-num" id="project-counter">0</span>+ Projects</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: 3D Logo & Portal Visuals (55%) -->
+                <div class="hero-right-visual reveal-element">
+                    <!-- Energy Portal Scenery -->
+                    <div class="portal-scenery">
+                        <!-- Mountains Backdrop -->
+                        <div class="portal-mountains"></div>
+                        
+                        <!-- Glow Core Portal Ring -->
+                        <div class="energy-portal"></div>
+                        
+                        <!-- Vertical Beam of Light -->
+                        <div class="vertical-light-beam"></div>
+                    </div>
+
+                    <!-- 3D Parallax Logo Assembly -->
+                    <div class="logo-3d-scene">
+                        <!-- Holographic Floating Platform -->
+                        <div class="hologram-platform"></div>
+
+                        <!-- Main 3D Logo Target -->
+                        <div class="logo-3d-container" id="logo-3d" tabindex="0" aria-label="Interactive floating 3D VELORA Logo emblem">
+                            <!-- Layer 1: Ambient Glow (Deepest Z) -->
+                            <div class="logo-layer layer-glow" data-depth="0.08"></div>
+                            
+                            <!-- Layer 2: Geometric Hexagonal Wireframe Ring -->
+                            <div class="logo-layer layer-back" data-depth="0.12">
+                                <svg viewBox="0 0 100 100" class="logo-svg" aria-hidden="true">
+                                    <polygon points="50,12 83,31 83,69 50,88 17,69 17,31" class="wireframe-polygon" />
+                                </svg>
+                            </div>
+                            
+                            <!-- Layer 3: Core Solid V Emblem -->
+                            <div class="logo-layer layer-mid" data-depth="0.22">
+                                <svg viewBox="0 0 100 100" class="logo-svg" aria-hidden="true">
+                                    <path d="M22,25 L38,25 L50,56 L62,25 L78,25 L56,75 L44,75 Z" class="emblem-path" />
+                                </svg>
+                            </div>
+                            
+                            <!-- Layer 4: Glass Shimmer Overlay (Highest Z) -->
+                            <div class="logo-layer layer-front" data-depth="0.32">
+                                <svg viewBox="0 0 100 100" class="logo-svg" aria-hidden="true">
+                                    <path d="M22,25 L38,25 L50,56 L62,25 L78,25 L56,75 L44,75 Z" class="shimmer-path" />
+                                    <line x1="10" y1="20" x2="90" y2="80" class="diagonal-reflection" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Scroll to Explore Indicator (Bottom-Right) -->
+            <div class="hero-scroll-indicator reveal-element">
+                <span class="scroll-label">Scroll to Explore</span>
+                <div class="scroll-track">
+                    <span class="scroll-dot-pulse"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 01 — TRUSTED BRANDS -->
+        <section class="marquee-section" aria-label="Clients and Trust">
+            <div class="marquee-title-wrapper">
+                <span class="marquee-title-line"></span>
+                <span class="marquee-title-text">Helping Modern Businesses Build Better Digital Experiences</span>
+                <span class="marquee-title-line"></span>
+            </div>
+            
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <div class="marquee-item"><svg viewBox="0 0 120 40" class="brand-logo-svg" aria-label="Aether Brand"><text x="10" y="25" font-family="Outfit" font-size="14" font-weight="700" fill="currentColor" letter-spacing="1">AETHER</text><circle cx="95" cy="20" r="4" fill="currentColor"/></svg></div>
+                    <div class="marquee-item"><svg viewBox="0 0 120 40" class="brand-logo-svg" aria-label="Vertex Brand"><text x="10" y="25" font-family="Outfit" font-size="14" font-weight="700" fill="currentColor" letter-spacing="1">VERTEX</text><line x1="90" y1="12" x2="105" y2="28" stroke="currentColor" stroke-width="2"/></svg></div>
+                    <div class="marquee-item"><svg viewBox="0 0 120 40" class="brand-logo-svg" aria-label="Nova Brand"><text x="10" y="25" font-family="Outfit" font-size="14" font-weight="700" fill="currentColor" letter-spacing="1">NOVA</text><polygon points="90,15 105,15 97,28" fill="currentColor"/></svg></div>
+                    <div class="marquee-item"><svg viewBox="0 0 120 40" class="brand-logo-svg" aria-label="Kronos Brand"><text x="10" y="25" font-family="Outfit" font-size="14" font-weight="700" fill="currentColor" letter-spacing="1">KRONOS</text><rect x="90" y="15" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+                    <div class="marquee-item"><svg viewBox="0 0 120 40" class="brand-logo-svg" aria-label="Atlas Brand"><text x="10" y="25" font-family="Outfit" font-size="14" font-weight="700" fill="currentColor" letter-spacing="1">ATLAS</text><circle cx="95" cy="20" r="6" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+                    <div class="marquee-item"><svg viewBox="0 0 120 40" class="brand-logo-svg" aria-label="Sora Brand"><text x="10" y="25" font-family="Outfit" font-size="14" font-weight="700" fill="currentColor" letter-spacing="1">SORA</text><path d="M90,25 Q97,12 105,25" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+                </div>
+                <div class="marquee-content" aria-hidden="true">
+                    <div class="marquee-item"><svg viewBox="0 0 120 40" class="brand-logo-svg"><text x="10" y="25" font-family="Outfit" font-size="14" font-weight="700" fill="currentColor" letter-spacing="1">AETHER</text><circle cx="95" cy="20" r="4" fill="currentColor"/></svg></div>
+                    <div class="marquee-item"><svg viewBox="0 0 120 40" class="brand-logo-svg"><text x="10" y="25" font-family="Outfit" font-size="14" font-weight="700" fill="currentColor" letter-spacing="1">VERTEX</text><line x1="90" y1="12" x2="105" y2="28" stroke="currentColor" stroke-width="2"/></svg></div>
+                    <div class="marquee-item"><svg viewBox="0 0 120 40" class="brand-logo-svg"><text x="10" y="25" font-family="Outfit" font-size="14" font-weight="700" fill="currentColor" letter-spacing="1">NOVA</text><polygon points="90,15 105,15 97,28" fill="currentColor"/></svg></div>
+                    <div class="marquee-item"><svg viewBox="0 0 120 40" class="brand-logo-svg"><text x="10" y="25" font-family="Outfit" font-size="14" font-weight="700" fill="currentColor" letter-spacing="1">KRONOS</text><rect x="90" y="15" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+                    <div class="marquee-item"><svg viewBox="0 0 120 40" class="brand-logo-svg"><text x="10" y="25" font-family="Outfit" font-size="14" font-weight="700" fill="currentColor" letter-spacing="1">ATLAS</text><circle cx="95" cy="20" r="6" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+                    <div class="marquee-item"><svg viewBox="0 0 120 40" class="brand-logo-svg"><text x="10" y="25" font-family="Outfit" font-size="14" font-weight="700" fill="currentColor" letter-spacing="1">SORA</text><path d="M90,25 Q97,12 105,25" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+                </div>
+            </div>
+            
+            <div class="marquee-bottom-line" aria-hidden="true"></div>
+        </section>
+
+        <!-- SECTION 02 — SERVICES / CAPABILITIES -->
+        <section class="services-section" id="services">
+            <div class="container">
+                <div class="section-header align-center reveal-trigger-services">
+                    <p class="section-tag">Capabilities</p>
+                    <h2 class="section-title">Services That Drive Growth</h2>
+                    <p class="section-subtitle">We build premium digital assets tailored for businesses targeting top-tier clients. No shortcuts. Just state-of-the-art engineering.</p>
+                </div>
+
+                <!-- Grid Layout for Services -->
+                <div class="services-grid">
+                    
+                    <!-- Card 1: Website Development -->
+                    <div class="service-card glass-card reveal-services-item">
+                        <div class="card-bg-gradient"></div>
+                        <div class="card-content">
+                            <div class="service-icon-wrapper-locked">
+                                <div class="locked-icon-browser">
+                                    <span class="browser-dot"></span>
+                                    <span class="browser-dot"></span>
+                                    <span class="browser-dot"></span>
+                                    <div class="browser-wireframe-lines">
+                                        <span class="w-line"></span>
+                                        <span class="w-line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="service-name">Website Development</h3>
+                            <p class="service-desc">Bespoke digital flagships featuring flawless layouts, instant loading optimization, and modern web integrations crafted using optimal frontend engineering.</p>
+                            <a href="contact.html" class="service-action-btn">
+                                <span class="action-text">Request Details</span>
+                                <i data-lucide="arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: UI/UX Design -->
+                    <div class="service-card glass-card reveal-services-item">
+                        <div class="card-bg-gradient"></div>
+                        <div class="card-content">
+                            <div class="service-icon-wrapper-locked">
+                                <div class="locked-icon-figma">
+                                    <span class="figma-layer layer-1"></span>
+                                    <span class="figma-layer layer-2"></span>
+                                    <span class="figma-layer layer-3"></span>
+                                </div>
+                            </div>
+                            <h3 class="service-name">UI/UX Design</h3>
+                            <p class="service-desc">Immersive spatial journeys designed with beautiful typography grids, high-fidelity interfaces, and micro-interaction wireframes built to convert high-value visitors.</p>
+                            <a href="contact.html" class="service-action-btn">
+                                <span class="action-text">Request Details</span>
+                                <i data-lucide="arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: AI Automation -->
+                    <div class="service-card glass-card reveal-services-item">
+                        <div class="card-bg-gradient"></div>
+                        <div class="card-content">
+                            <div class="service-icon-wrapper-locked">
+                                <div class="locked-icon-orb">
+                                    <span class="orb-core"></span>
+                                    <span class="orb-pulse"></span>
+                                    <canvas class="card-particles-canvas" width="60" height="60"></canvas>
+                                </div>
+                            </div>
+                            <h3 class="service-name">AI Automation</h3>
+                            <p class="service-desc">Inject artificial intelligence workflows directly into your platform. Streamline user flows, schedule operations, and connect custom assistant engines.</p>
+                            <a href="contact.html" class="service-action-btn">
+                                <span class="action-text">Request Details</span>
+                                <i data-lucide="arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Brand Identity -->
+                    <div class="service-card glass-card reveal-services-item">
+                        <div class="card-bg-gradient"></div>
+                        <div class="card-content">
+                            <div class="service-icon-wrapper-locked">
+                                <div class="locked-icon-diamond">
+                                    <svg viewBox="0 0 100 100" class="diamond-svg" aria-hidden="true">
+                                        <polygon points="50,15 80,45 50,75 20,45" class="diamond-polygon" />
+                                        <line x1="50" y1="15" x2="50" y2="75" class="diamond-axis" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h3 class="service-name">Brand Identity</h3>
+                            <p class="service-desc">Shaping modern luxury positioning. We architect visual guidelines, unique wordmarks, premium color maps, and style assets that project category authority.</p>
+                            <a href="contact.html" class="service-action-btn">
+                                <span class="action-text">Request Details</span>
+                                <i data-lucide="arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: SEO & Performance -->
+                    <div class="service-card glass-card reveal-services-item">
+                        <div class="card-bg-gradient"></div>
+                        <div class="card-content">
+                            <div class="service-icon-wrapper-locked">
+                                <div class="locked-icon-rocket">
+                                    <i data-lucide="rocket" class="rocket-svg" aria-hidden="true"></i>
+                                    <div class="speed-trails">
+                                        <span class="trail"></span>
+                                        <span class="trail"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="service-name">SEO & Performance</h3>
+                            <p class="service-desc">Achieve 99+ Core Web Vitals scores. We compress multimedia files, structure layout scripts, and build semantic nodes to ensure search engines rank you first.</p>
+                            <a href="contact.html" class="service-action-btn">
+                                <span class="action-text">Request Details</span>
+                                <i data-lucide="arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Maintenance & Support -->
+                    <div class="service-card glass-card reveal-services-item">
+                        <div class="card-bg-gradient"></div>
+                        <div class="card-content">
+                            <div class="service-icon-wrapper-locked">
+                                <div class="locked-icon-shield">
+                                    <i data-lucide="shield" class="shield-svg" aria-hidden="true"></i>
+                                    <span class="shield-pulse-ring"></span>
+                                </div>
+                            </div>
+                            <h3 class="service-name">Maintenance & Support</h3>
+                            <p class="service-desc">Long-term development security. Consistent framework security updates, performance metrics auditing, and reliable design modifications.</p>
+                            <a href="contact.html" class="service-action-btn">
+                                <span class="action-text">Request Details</span>
+                                <i data-lucide="arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 03 — FEATURED PROJECTS -->
+        <section class="showcase-section" id="work">
+            <div class="container">
+                <div class="section-header reveal-trigger-projects">
+                    <p class="section-tag">Showcase</p>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Curated visual flagships built to elevate our clients above their competition.</p>
+                </div>
+
+                <div class="portfolio-grid">
+                    
+                    <!-- Project 1: Aroma Cafe -->
+                    <div class="project-item reveal-project-item">
+                        <div class="project-media glass-card">
+                            <div class="mockup-frame">
+                                <div class="mockup-header">
+                                    <span class="mockup-dot"></span>
+                                    <span class="mockup-dot"></span>
+                                    <span class="mockup-dot"></span>
+                                </div>
+                                <div class="mockup-body mockup-cafe">
+                                    <div class="mockup-nav">AROMA CAFE</div>
+                                    <div class="mockup-hero">
+                                        <h4>Sensory Coffee Experience</h4>
+                                        <p>Organic blends &amp; gourmet fresh pastry.</p>
+                                    </div>
+                                    <div class="mockup-grid">
+                                        <span class="mockup-box mockup-cafe-item"></span>
+                                        <span class="mockup-box mockup-cafe-item"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-category">Food &amp; Culinary</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <h3 class="project-title">AROMA CAFE</h3>
+                            <p class="project-description">A premium sensory café experience website featuring interactive gourmet menus, fluid table booking modules, and elegant culinary presentation cards.</p>
+                            <a href="https://splendorous-macaron-91dc60.netlify.app/" target="_blank" class="project-link" aria-label="View Aroma Cafe live website (opens in new tab)">
+                                <span class="link-text">View Live Demo</span>
+                                <i data-lucide="arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Apex Classes -->
+                    <div class="project-item reveal-project-item">
+                        <div class="project-media glass-card">
+                            <div class="mockup-frame">
+                                <div class="mockup-header">
+                                    <span class="mockup-dot"></span>
+                                    <span class="mockup-dot"></span>
+                                    <span class="mockup-dot"></span>
+                                </div>
+                                <div class="mockup-body mockup-classes">
+                                    <div class="mockup-nav">APEX CLASSES</div>
+                                    <div class="mockup-hero">
+                                        <h4>Apex Learning Hub</h4>
+                                        <p>Interactive test series &amp; digital tracking.</p>
+                                    </div>
+                                    <div class="mockup-grid">
+                                        <span class="mockup-circle mockup-classes-circle"></span>
+                                        <span class="mockup-bar mockup-classes-bar"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-category">EdTech &amp; Coaching</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <h3 class="project-title">APEX CLASSES</h3>
+                            <p class="project-description">A futuristic coaching platform designed with interactive syllabus roadmaps, exam schedule charts, and dynamic academic trackers.</p>
+                            <a href="https://dynamic-buttercream-34ea88.netlify.app/" target="_blank" class="project-link" aria-label="View Apex Classes live website (opens in new tab)">
+                                <span class="link-text">View Live Demo</span>
+                                <i data-lucide="arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Velour Salon -->
+                    <div class="project-item reveal-project-item">
+                        <div class="project-media glass-card">
+                            <div class="mockup-frame">
+                                <div class="mockup-header">
+                                    <span class="mockup-dot"></span>
+                                    <span class="mockup-dot"></span>
+                                    <span class="mockup-dot"></span>
+                                </div>
+                                <div class="mockup-body mockup-salon">
+                                    <div class="mockup-nav">VELOUR SALON</div>
+                                    <div class="mockup-hero">
+                                        <h4>Velour Esthetics</h4>
+                                        <p>Luxury hair therapy &amp; customized massage.</p>
+                                    </div>
+                                    <div class="mockup-grid">
+                                        <span class="mockup-line mockup-salon-line"></span>
+                                        <span class="mockup-line mockup-salon-line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-category">Beauty &amp; Wellness</span>
+                                <span class="project-year">2025</span>
+                            </div>
+                            <h3 class="project-title">VELOUR SALON</h3>
+                            <p class="project-description">An immersive luxury salon portal featuring appointment scheduling flows, stylized treatment lists, and premium lookbook galleries.</p>
+                            <a href="https://dynamic-sable-c1e825.netlify.app/" target="_blank" class="project-link" aria-label="View Velour Salon live website (opens in new tab)">
+                                <span class="link-text">View Live Demo</span>
+                                <i data-lucide="arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Darling Clinic -->
+                    <div class="project-item reveal-project-item">
+                        <div class="project-media glass-card">
+                            <div class="mockup-frame">
+                                <div class="mockup-header">
+                                    <span class="mockup-dot"></span>
+                                    <span class="mockup-dot"></span>
+                                    <span class="mockup-dot"></span>
+                                </div>
+                                <div class="mockup-body mockup-clinic">
+                                    <div class="mockup-nav">DARLING CLINIC</div>
+                                    <div class="mockup-hero">
+                                        <h4>Darling Medical Suite</h4>
+                                        <p>Longevity wellness programs &amp; scheduling.</p>
+                                    </div>
+                                    <div class="mockup-grid">
+                                        <span class="mockup-btn mockup-clinic-btn"></span>
+                                        <span class="mockup-panel mockup-clinic-panel"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-category">Medical &amp; Clinic</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <h3 class="project-title">DARLING CLINIC</h3>
+                            <p class="project-description">A modern healthcare portal providing dynamic doctor slot reservation interfaces, health check descriptions, and trusted clinical details.</p>
+                            <a href="https://darling-sunburst-807817.netlify.app/" target="_blank" class="project-link" aria-label="View Darling Clinic live website (opens in new tab)">
+                                <span class="link-text">View Live Demo</span>
+                                <i data-lucide="arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 04 — ABOUT VELORA -->
+        <section class="about-section" id="about">
+            <div class="container about-grid-split">
+                <!-- Left Column: Storytelling Content -->
+                <div class="about-story-col">
+                    <p class="section-tag reveal-about-line">Our Mission</p>
+                    <h2 class="section-title reveal-about-line">Crafting Digital Flagships</h2>
+                    
+                    <div class="about-story-text">
+                        <p class="reveal-about-line">VELORA Web Solution was founded with one mission: to help businesses establish a premium digital presence through beautiful websites, intelligent solutions, and unforgettable user experiences.</p>
+                        <p class="reveal-about-line">We believe every business deserves a website that builds trust, generates leads, and reflects the quality of its brand.</p>
+                        <p class="about-highlight-quote reveal-about-line">We don't just create websites. <span>We craft digital experiences.</span></p>
+                    </div>
+                </div>
+
+                <!-- Right Column: Premium Visual Animation -->
+                <div class="about-visual-col" aria-hidden="true">
+                    <div class="about-visual-container glass-card">
+                        <div class="about-glow-orb"></div>
+                        <div class="about-wireframe-cube">
+                            <span class="cube-face face-front"></span>
+                            <span class="cube-face face-back"></span>
+                        </div>
+                        <div class="about-floating-card glass-card">
+                            <i data-lucide="award"></i>
+                            <div>
+                                <h5>100% Custom Build</h5>
+                                <p>No generic templates.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 05 — MEET THE FOUNDERS -->
+        <section class="founders-section">
+            <div class="container">
+                <div class="section-header align-center reveal-trigger-founders">
+                    <p class="section-tag">Creative Leaders</p>
+                    <h2 class="section-title">Meet The Founders</h2>
+                    <p class="section-subtitle">The creative architects bridging strategy, premium UI design, and high-performance engineering.</p>
+                </div>
+
+                <div class="founders-grid">
+                    <!-- Founder 1: Rajdeepsinh Zala -->
+                    <div class="founder-card glass-card reveal-founder-card">
+                        <div class="founder-photo-area" aria-hidden="true">
+                            <div class="photo-accent-ring"></div>
+                            <span class="photo-letters">RZ</span>
+                        </div>
+                        <div class="founder-info">
+                            <h3 class="founder-name">Rajdeepsinh Zala</h3>
+                            <p class="founder-role">Founder &amp; Lead Engineer</p>
+                            <p class="founder-bio">Specializes in lightweight codebases, high performance variables, custom interactive scripts, automation API architectures, and flawless frontend design.</p>
+                            
+                            <div class="founder-actions">
+                                <a href="https://www.instagram.com/rajdeepsinh_zala7488?igsh=MXVmbmpjdDZtNzVrMg==" target="_blank" class="founder-social-icon" aria-label="Rajdeepsinh Instagram profile">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                                </a>
+                                <a href="https://www.linkedin.com/in/rajdeepsinh-zala-922877368?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="founder-social-icon" aria-label="Rajdeepsinh LinkedIn profile">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                                </a>
+                                <a href="mailto:rajdeepsinhzala723@gmail.com" class="founder-social-icon" aria-label="Email Rajdeepsinh">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                </a>
+                            </div>
+                            
+                            <div style="display: flex; gap: 12px; margin-top: 20px; width: 100%;">
+                                <a href="https://symphonious-pie-1ecb61.netlify.app/" target="_blank" class="btn btn-secondary btn-founder-portfolio magnetic" data-magnetic-strength="0.1" style="flex: 1; padding: 10px 14px; font-size: 0.8rem; height: auto; text-align: center; justify-content: center;">
+                                    <span class="btn-text">Portfolio</span>
+                                </a>
+                                <a href="contact.html" class="btn btn-primary magnetic" data-magnetic-strength="0.1" style="flex: 1; padding: 10px 14px; font-size: 0.8rem; height: auto; text-align: center; display: flex; align-items: center; justify-content: center;">
+                                    <span class="btn-text" style="color: var(--bg-primary);">Consult</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Founder 2: Ronak Makwana -->
+                    <div class="founder-card glass-card reveal-founder-card">
+                        <div class="founder-photo-area" aria-hidden="true">
+                            <div class="photo-accent-ring"></div>
+                            <span class="photo-letters">RM</span>
+                        </div>
+                        <div class="founder-info">
+                            <h3 class="founder-name">Ronak Makwana</h3>
+                            <p class="founder-role">Co-Founder &amp; Creative Director</p>
+                            <p class="founder-bio">Focuses on translation of brand identity to visual space, luxury wireframes, aesthetic palettes, and pixel perfection.</p>
+                            
+                            <div class="founder-actions">
+                                <a href="https://www.instagram.com/ronak_makwana2911?igsh=YWIxNmRodHM0bXdt" target="_blank" class="founder-social-icon" aria-label="Ronak Instagram profile">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                                </a>
+                                <a href="https://www.linkedin.com/in/ronak-makwana-809bb33b5?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="founder-social-icon" aria-label="Ronak LinkedIn profile">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                                </a>
+                                <a href="mailto:ronakmakwan2911@gmail.com" class="founder-social-icon" aria-label="Email Ronak">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                </a>
+                            </div>
+                            
+                            <div style="display: flex; gap: 12px; margin-top: 20px; width: 100%;">
+                                <a href="https://stupendous-toffee-af55eb.netlify.app/" target="_blank" class="btn btn-secondary btn-founder-portfolio magnetic" data-magnetic-strength="0.1" style="flex: 1; padding: 10px 14px; font-size: 0.8rem; height: auto; text-align: center; justify-content: center;">
+                                    <span class="btn-text">Portfolio</span>
+                                </a>
+                                <a href="contact.html" class="btn btn-primary magnetic" data-magnetic-strength="0.1" style="flex: 1; padding: 10px 14px; font-size: 0.8rem; height: auto; text-align: center; display: flex; align-items: center; justify-content: center;">
+                                    <span class="btn-text" style="color: var(--bg-primary);">Consult</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 06 — OUR PROCESS -->
+        <section class="process-section" id="process">
+            <div class="container">
+                <div class="section-header align-center reveal-trigger-process">
+                    <p class="section-tag">Methodology</p>
+                    <h2 class="section-title">The Crafting Process</h2>
+                    <p class="section-subtitle">Our structured timeline translates ideas into high-performing digital masterpieces.</p>
+                </div>
+
+                <div class="process-timeline-horizontal">
+                    <!-- Progress Line -->
+                    <div class="timeline-progress-line" aria-hidden="true">
+                        <span class="line-fill" id="timeline-scroll-fill"></span>
+                    </div>
+
+                    <!-- Steps track -->
+                    <div class="timeline-steps-wrapper">
+                        <!-- Step 1 -->
+                        <div class="timeline-node-locked">
+                            <div class="node-circle" aria-hidden="true"><i data-lucide="search"></i></div>
+                            <span class="node-step">01</span>
+                            <h4 class="node-title">Discovery</h4>
+                            <p class="node-desc">Establishing identity alignment, requirements, and project scope.</p>
+                        </div>
+                        
+                        <!-- Step 2 -->
+                        <div class="timeline-node-locked">
+                            <div class="node-circle" aria-hidden="true"><i data-lucide="compass"></i></div>
+                            <span class="node-step">02</span>
+                            <h4 class="node-title">Research</h4>
+                            <p class="node-desc">Analyzing competitors and plotting creative design direction.</p>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="timeline-node-locked">
+                            <div class="node-circle" aria-hidden="true"><i data-lucide="layers"></i></div>
+                            <span class="node-step">03</span>
+                            <h4 class="node-title">UI/UX Design</h4>
+                            <p class="node-desc">Designing wireframes, glass aesthetics, and luxury mockups.</p>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="timeline-node-locked">
+                            <div class="node-circle" aria-hidden="true"><i data-lucide="code-2"></i></div>
+                            <span class="node-step">04</span>
+                            <h4 class="node-title">Development</h4>
+                            <p class="node-desc">Coding clean, responsive semantic frontend components.</p>
+                        </div>
+
+                        <!-- Step 5 -->
+                        <div class="timeline-node-locked">
+                            <div class="node-circle" aria-hidden="true"><i data-lucide="shield-alert"></i></div>
+                            <span class="node-step">05</span>
+                            <h4 class="node-title">Testing</h4>
+                            <p class="node-desc">Auditing page load speed, layout scaling, and link pathways.</p>
+                        </div>
+
+                        <!-- Step 6 -->
+                        <div class="timeline-node-locked">
+                            <div class="node-circle" aria-hidden="true"><i data-lucide="rocket"></i></div>
+                            <span class="node-step">06</span>
+                            <h4 class="node-title">Launch</h4>
+                            <p class="node-desc">Deploying visual assets and syncing domains for public release.</p>
+                        </div>
+
+                        <!-- Step 7 -->
+                        <div class="timeline-node-locked">
+                            <div class="node-circle" aria-hidden="true"><i data-lucide="shield-check"></i></div>
+                            <span class="node-step">07</span>
+                            <h4 class="node-title">Support</h4>
+                            <p class="node-desc">Long-term audit checks, code updates, and layout maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 07 — WHY CHOOSE VELORA -->
+        <section class="why-us-section">
+            <div class="container">
+                <div class="section-header align-center reveal-trigger-why">
+                    <p class="section-tag">Value Proposition</p>
+                    <h2 class="section-title">Why Choose Velora</h2>
+                    <p class="section-subtitle">We prioritize visual distinction and high efficiency over template replication.</p>
+                </div>
+
+                <div class="why-us-grid">
+                    <div class="why-us-card glass-card reveal-why-item" data-anim-type="fade">
+                        <div class="why-icon" aria-hidden="true"><i data-lucide="sparkles"></i></div>
+                        <h3>Premium Design</h3>
+                        <p>Artistic grid systems, elegant glass features, and customized style directories. No boring templates.</p>
+                    </div>
+
+                    <div class="why-us-card glass-card reveal-why-item" data-anim-type="slide-left">
+                        <div class="why-icon" aria-hidden="true"><i data-lucide="gauge"></i></div>
+                        <h3>Lightning Performance</h3>
+                        <p>Under 1-second load times utilizing optimized scripts and compressed visual elements.</p>
+                    </div>
+
+                    <div class="why-us-card glass-card reveal-why-item" data-anim-type="slide-right">
+                        <div class="why-icon" aria-hidden="true"><i data-lucide="search"></i></div>
+                        <h3>SEO Optimized</h3>
+                        <p>Fully indexable page structures with microdata configurations and keyword mappings built from scratch.</p>
+                    </div>
+
+                    <div class="why-us-card glass-card reveal-why-item" data-anim-type="scale">
+                        <div class="why-icon" aria-hidden="true"><i data-lucide="smartphone"></i></div>
+                        <h3>Responsive Everywhere</h3>
+                        <p>Flawless design translations spanning desktops, tablets, and mobile layouts.</p>
+                    </div>
+
+                    <div class="why-us-card glass-card reveal-why-item" data-anim-type="fade">
+                        <div class="why-icon" aria-hidden="true"><i data-lucide="cpu"></i></div>
+                        <h3>Modern Technology</h3>
+                        <p>Framework systems that ensure your site remains scalable, robust, and clean.</p>
+                    </div>
+
+                    <div class="why-us-card glass-card reveal-why-item" data-anim-type="slide-up">
+                        <div class="why-icon" aria-hidden="true"><i data-lucide="shield-check"></i></div>
+                        <h3>Long-Term Support</h3>
+                        <p>Continuous monitoring, updates, and maintenance. Your web flagship is always protected.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 08 — STATS -->
+        <section class="stats-section">
+            <div class="container reveal-trigger-stats">
+                <div class="stats-main-container glass-card">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number" id="stat-count-projects">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="stat-count-clients">0</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="stat-count-response">0</span>
+                            <span class="stat-label">Response Time (Hrs)</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="stat-count-sat">0</span>
+                            <span class="stat-label">Client Satisfaction (%)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- SECTION 10 — FAQ ACCORDION -->
+        <section class="services-section">
+            <div class="container">
+                <div class="section-header align-center">
+                    <p class="section-tag">FAQ</p>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Transparent answers about our creative timeline, engineering process, and budgets.</p>
+                </div>
+
+                <div class="faq-layout-grid" style="display: grid; grid-template-columns: 1fr; gap: 20px; max-width: 800px; margin: 0 auto;">
+                    <!-- Question 1 -->
+                    <div class="faq-accordion-item glass-card">
+                        <button class="faq-header-btn" aria-expanded="false" aria-label="Toggle answer: How long does a website take?">
+                            <h3>How long does a website take?</h3>
+                            <i data-lucide="plus" class="faq-icon-toggle" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-body-content">
+                            <p>Typically, a custom luxury-grade web platform requires 4 to 8 weeks to complete, depending on wireframe complexity, interaction levels, and automation requirements.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="faq-accordion-item glass-card">
+                        <button class="faq-header-btn" aria-expanded="false" aria-label="Toggle answer: Do you redesign websites?">
+                            <h3>Do you redesign websites?</h3>
+                            <i data-lucide="plus" class="faq-icon-toggle" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-body-content">
+                            <p>Yes. We audit and transform outdated, low-performing web pages into brand-aligned, ultra-fast visual flagships built with customized frameworks.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="faq-accordion-item glass-card">
+                        <button class="faq-header-btn" aria-expanded="false" aria-label="Toggle answer: Do you provide SEO?">
+                            <h3>Do you provide SEO?</h3>
+                            <i data-lucide="plus" class="faq-icon-toggle" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-body-content">
+                            <p>Absolutely. Perfect SEO is part of our core design framework. We optimize Core Web Vitals, structure semantic DOM tags, and register Schema metadata on every build.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="faq-accordion-item glass-card">
+                        <button class="faq-header-btn" aria-expanded="false" aria-label="Toggle answer: Can you build AI solutions?">
+                            <h3>Can you build AI solutions?</h3>
+                            <i data-lucide="plus" class="faq-icon-toggle" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-body-content">
+                            <p>Yes. We specialize in embedding customized Artificial Intelligence engines, automated database loops, and interactive chatbot structures directly into business web apps.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="faq-accordion-item glass-card">
+                        <button class="faq-header-btn" aria-expanded="false" aria-label="Toggle answer: How much does a website cost?">
+                            <h3>How much does a website cost?</h3>
+                            <i data-lucide="plus" class="faq-icon-toggle" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-body-content">
+                            <p>Bespoke visual flagships start from ₹2 lakh, reflecting our commitment to absolute handcrafted quality, performance guarantees, and detailed creative direction.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="faq-accordion-item glass-card">
+                        <button class="faq-header-btn" aria-expanded="false" aria-label="Toggle answer: Do you offer maintenance?">
+                            <h3>Do you offer maintenance?</h3>
+                            <i data-lucide="plus" class="faq-icon-toggle" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-body-content">
+                            <p>Yes, we offer ongoing support plans that include performance metrics updates, domain maintenance, and framework optimization modifications.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 11 — FINAL CTA -->
+        <section class="contact-section" style="padding: 120px 0;">
+            <div class="container" style="text-align: center;">
+                <div class="glass-card" style="padding: 80px 40px; background: linear-gradient(135deg, rgba(123, 44, 191, 0.05), rgba(0, 82, 255, 0.05)); border-radius: var(--border-radius-xl); overflow: hidden; position: relative;">
+                    <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(123, 44, 191, 0.08) 0%, transparent 60%); filter: blur(30px); pointer-events: none; z-index: 0;"></div>
+                    
+                    <div style="position: relative; z-index: 1;">
+                        <h2 class="section-title" style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 24px;">Ready To Elevate Your Digital Presence?</h2>
+                        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 40px auto; font-size: 1.1rem;">Let's plan and design a digital flagship that reflects the high quality of your brand.</p>
+                        
+                        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                            <a href="contact.html" class="btn btn-primary magnetic" data-magnetic-strength="0.15">
+                                <span class="btn-text">Book Consultation</span>
+                                <span class="btn-glow"></span>
+                            </a>
+                            <a href="#work" class="btn btn-secondary magnetic" data-magnetic-strength="0.1">
+                                <span class="btn-text">View Portfolio</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SECTION 12 — PREMIUM FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand-info">
+                    <a href="#" class="logo-wrapper" aria-label="VELORA Web Solution Home">
+                        <span class="logo-text">VELORA</span>
+                        <span class="logo-dot"></span>
+                    </a>
+                    <p class="footer-tagline">Crafting Digital Experiences That Inspire Growth</p>
+                    <div class="social-links" style="margin-top: 24px;">
+                        <a href="https://www.linkedin.com/in/velora-web-solution-526574423?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/velora_webs_rr?igsh=MjU0YzB4dmljcHJp" target="_blank" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                        <a href="mailto:velorawebsrr89@gmail.com" aria-label="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#process">Our Process</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">Web Development</a></li>
+                            <li><a href="#services">UI/UX Design</a></li>
+                            <li><a href="#services">AI Automation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#work">Case Studies</a></li>
+                            <li><a href="sitemap.xml" target="_blank">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 VELORA Web Solution. All rights reserved. Crafted with ❤️ by VELORA.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <span class="footer-divider">/</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top-btn" id="back-to-top" aria-label="Smooth scroll back to top of page">
+        <i data-lucide="arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- GSAP Libraries CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Production Modular JS Links -->
+    <script src="js/theme.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

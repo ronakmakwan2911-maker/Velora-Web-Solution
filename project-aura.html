@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA ESTATES | Premium Real Estate Portal by VELORA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg-dark: #050508;
+            --primary: #cda250; /* Gold brand color */
+            --text-main: #f5f5f7;
+            --text-secondary: #9ea0a8;
+            --glass-card: rgba(255, 255, 255, 0.02);
+            --glass-border: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        /* Top Return Navbar */
+        .return-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(5, 5, 8, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 16px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+
+        .back-btn:hover {
+            opacity: 0.8;
+        }
+
+        .agency-brand {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .agency-brand span {
+            color: var(--text-main);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 24px 60px 24px;
+            background: radial-gradient(circle at center, rgba(205, 162, 80, 0.08) 0%, transparent 60%);
+            position: relative;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border: 1px solid rgba(205, 162, 80, 0.3);
+            background: rgba(205, 162, 80, 0.05);
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 24px;
+            max-width: 900px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+            background: linear-gradient(135deg, #f3d082, #a1782f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        /* Listings Grid */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 48px;
+            border-left: 3px solid var(--primary);
+            padding-left: 20px;
+        }
+
+        .listings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+
+        .listing-card {
+            background: var(--glass-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .listing-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(205, 162, 80, 0.2);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 240px;
+            background-size: cover;
+            background-position: center;
+            background-color: #0f1015;
+            position: relative;
+        }
+
+        /* SVG Layout patterns to mimic visual architecture */
+        .card-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(205, 162, 80, 0.1), rgba(0, 0, 0, 0.4));
+        }
+
+        .card-info {
+            padding: 24px;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+
+        .meta {
+            display: flex;
+            gap: 16px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--glass-border);
+            padding-top: 16px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .meta-item svg {
+            width: 16px;
+            height: 16px;
+            color: var(--primary);
+        }
+
+        /* Footer banner info */
+        .footer-banner {
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            padding: 60px 24px;
+            margin-top: 100px;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .return-nav {
+                padding: 14px 24px;
+            }
+            .back-btn {
+                font-size: 0.85rem;
+            }
+            .agency-brand {
+                font-size: 0.75rem;
+            }
+            .container {
+                padding: 40px 20px;
+            }
+            .listings-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        @media (max-width: 576px) {
+            .return-nav {
+                padding: 12px 16px;
+            }
+            .agency-brand {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Return Nav -->
+    <div class="return-nav">
+        <a href="index.html" class="back-btn">
+            <i data-lucide="arrow-left"></i> Back to VELORA Home
+        </a>
+        <div class="agency-brand">
+            Case Study Showcase by <span>VELORA</span>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="badge">Exclusive Portfolio</div>
+        <h1>Living Redefined in <span>London & Dubai</span></h1>
+        <p>A curated selection of luxury residences and high-value estates engineered for architectural distinction.</p>
+    </section>
+
+    <!-- Listings -->
+    <div class="container">
+        <h2 class="section-title">Signature Residences</h2>
+        <div class="listings-grid">
+            <!-- Listing 1 -->
+            <div class="listing-card">
+                <div class="card-img" style="background-image: radial-gradient(circle, #1a1a24 0%, #0c0c12 100%);">
+                    <!-- Styled using CSS architecture patterns -->
+                </div>
+                <div class="card-info">
+                    <div class="price">£8,950,000</div>
+                    <h3 class="title">The Belvedere Penthouse</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">Overlooking Hyde Park with 360 panoramic glass facades.</p>
+                    <div class="meta">
+                        <div class="meta-item"><i data-lucide="bed-double"></i> 5 Beds</div>
+                        <div class="meta-item"><i data-lucide="bath"></i> 6 Baths</div>
+                        <div class="meta-item"><i data-lucide="maximize"></i> 6,200 sqft</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listing 2 -->
+            <div class="listing-card">
+                <div class="card-img" style="background-image: radial-gradient(circle, #241e1a 0%, #120e0c 100%);"></div>
+                <div class="card-info">
+                    <div class="price">$14,500,000</div>
+                    <h3 class="title">Palm Jumeirah Villa</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">Bespoke beachside architecture with private marina slips.</p>
+                    <div class="meta">
+                        <div class="meta-item"><i data-lucide="bed-double"></i> 6 Beds</div>
+                        <div class="meta-item"><i data-lucide="bath"></i> 8 Baths</div>
+                        <div class="meta-item"><i data-lucide="maximize"></i> 8,400 sqft</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listing 3 -->
+            <div class="listing-card">
+                <div class="card-img" style="background-image: radial-gradient(circle, #1e1e24 0%, #0e0e12 100%);"></div>
+                <div class="card-info">
+                    <div class="price">£4,200,000</div>
+                    <h3 class="title">Mayfair Mews House</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">Classic brick architecture meeting contemporary luxury interiors.</p>
+                    <div class="meta">
+                        <div class="meta-item"><i data-lucide="bed-double"></i> 3 Beds</div>
+                        <div class="meta-item"><i data-lucide="bath"></i> 4 Baths</div>
+                        <div class="meta-item"><i data-lucide="maximize"></i> 3,800 sqft</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Banner -->
+    <div class="footer-banner">
+        <p>AURA ESTATES — Designed and engineered by VELORA Web Solution.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">&copy; 2026. All rights reserved.</p>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

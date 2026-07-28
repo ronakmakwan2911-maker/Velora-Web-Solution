@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Start Project | VELORA Web Solution Command Center</title>
+    <meta name="description"
+        content="Initialize your next digital project. VELORA crafts bespoke, high-performance web experiences that combine luxury design and motion.">
+    <meta name="author" content="VELORA Web Solution">
+
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/png" href="favicon/favicon.png">
+
+    <!-- Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&family=Syne:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Production Modular CSS Links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Icons CDN (Lucide Icons) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        emailjs.init({
+            publicKey: "dXOZ8LU8IxcOs-YR7"
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Premium Loader -->
+    <div class="preloader" role="status" aria-live="polite">
+        <div class="loader-logo-container">
+            <svg viewBox="0 0 100 100" class="loader-logo-svg" aria-hidden="true">
+                <path d="M22,25 L38,25 L50,56 L62,25 L78,25 L56,75 L44,75 Z" class="loader-outline-path" />
+            </svg>
+            <div class="loader-glow-spot"></div>
+        </div>
+        <div class="loader-progress-track" aria-hidden="true">
+            <div class="loader-progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-container" aria-hidden="true">
+        <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Ambient Dynamic Glows -->
+    <div class="ambient-glow" id="ambient-glow-1" aria-hidden="true"></div>
+    <div class="ambient-glow" id="ambient-glow-2" aria-hidden="true"></div>
+
+    <!-- Background Canvas for Interactive Particles -->
+    <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="main-header" id="navbar">
+        <div class="header-container glass-nav">
+            <!-- Brand Logo -->
+            <a href="index.html" class="logo-wrapper" aria-label="VELORA Web Solution Home">
+                <span class="logo-text">VELORA</span>
+                <span class="logo-dot"></span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#work" class="nav-link">Showcase</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#process" class="nav-link">Process</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Action Controls -->
+            <div class="header-actions">
+                <!-- Theme Switcher -->
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle light and dark mode theme"
+                    title="Toggle Theme">
+                    <i data-lucide="moon" class="icon-moon" aria-hidden="true"></i>
+                    <i data-lucide="sun" class="icon-sun" aria-hidden="true"></i>
+                </button>
+
+                <!-- Premium CTA Button -->
+                <a href="contact.html" class="btn btn-primary btn-nav magnetic" data-magnetic-strength="0.15"
+                    aria-label="Connect and book call">
+                    <span class="btn-text">Connect</span>
+                    <span class="btn-glow"></span>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle main navigation mobile drawer">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Fullscreen Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay" aria-hidden="true">
+        <div class="mobile-menu-container">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html#services" class="mobile-nav-link">Services</a></li>
+                <li><a href="index.html#work" class="mobile-nav-link">Showcase</a></li>
+                <li><a href="index.html#about" class="mobile-nav-link">About</a></li>
+                <li><a href="index.html#process" class="mobile-nav-link">Process</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-footer">
+                <p>velorawebsrr89@gmail.com</p>
+                <div class="mobile-social-links">
+                    <a href="https://www.linkedin.com/in/velora-web-solution-526574423?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/velora_webs_rr?igsh=MjU0YzB4dmljcHJp" target="_blank" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    </a>
+                    <a href="mailto:velorawebsrr89@gmail.com" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main>
+        <section class="command-center-section">
+            <!-- Grid Matrix Blueprint Overlay -->
+            <div class="grid-overlay"></div>
+
+            <!-- Mouse Follow Glowing Orb light -->
+            <div class="mouse-follow-light" id="mouse-light"></div>
+
+            <div class="container">
+                <div class="command-center-panel glass-card">
+                    <!-- Continuously Animating Glowing Borders -->
+                    <div class="border-glow-line top-glow"></div>
+                    <div class="border-glow-line right-glow"></div>
+                    <div class="border-glow-line bottom-glow"></div>
+                    <div class="border-glow-line left-glow"></div>
+
+                    <div class="panel-header">
+                        <h1 class="panel-title">START NEW PROJECT</h1>
+                        <p class="panel-subtitle">Project Command Center — Request Initialization</p>
+                    </div>
+
+                    <form id="project-command-form" class="command-form" aria-label="Initialize Project Request Form">
+
+                        <!-- Name -->
+                        <div class="form-question">
+                            <label for="user-identity">
+                                <span class="icon">👤</span> Who are you?
+                            </label>
+
+                            <input type="text" id="user-identity" name="name" required
+                                placeholder="Your Name or Company Name">
+                        </div>
+
+                        <!-- Email & Phone -->
+                        <div class="form-grid">
+                            <!-- Email -->
+                            <div class="form-question">
+                                <label for="user-email">
+                                    <span class="icon">✉️</span> Email Address
+                                </label>
+                                <input type="email" id="user-email" name="email" required
+                                    placeholder="e.g. name@company.com">
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="form-question">
+                                <label for="user-phone">
+                                    <span class="icon">📞</span> Phone Number
+                                </label>
+                                <input type="tel" id="user-phone" name="phone" required
+                                    placeholder="e.g. +91 98765 43210">
+                            </div>
+                        </div>
+
+                        <!-- Business -->
+                        <div class="form-question">
+                            <label for="user-business">
+                                <span class="icon">🏢</span> What do you do?
+                            </label>
+
+                            <select id="user-business" name="business" required>
+
+                                <option value="">Select</option>
+                                <option value="Business / Corporation">Business / Corporation</option>
+                                <option value="Personal / Individual Creator">Personal / Individual Creator</option>
+                                <option value="Agency / Partner">Agency / Partner</option>
+                                <option value="Other">Other</option>
+
+                            </select>
+                        </div>
+
+                        <!-- Project -->
+                        <div class="form-question">
+                            <label for="project-details">
+                                <span class="icon">💡</span> What are we building?
+                            </label>
+
+                            <textarea id="project-details" name="project" rows="4" required
+                                placeholder="Tell us about your digital goals, required features, or concept..."></textarea>
+                        </div>
+
+                        <div class="form-grid">
+
+                            <!-- Budget -->
+                            <div class="form-question">
+                                <label for="project-budget">
+                                    <span class="icon">💰</span> Investment / Budget (INR)
+                                </label>
+
+                                <input type="text" id="project-budget" name="budget" required
+                                    placeholder="e.g. ₹5L, ₹15L">
+                            </div>
+
+                            <!-- Deadline -->
+                            <div class="form-question">
+                                <label for="project-deadline">
+                                    <span class="icon">📅</span> Expected Deadline
+                                </label>
+
+                                <input type="text" id="project-deadline" name="deadline" required
+                                    placeholder="e.g. 2 Months, Oct 2026">
+                            </div>
+
+                        </div>
+
+                        <!-- File Upload -->
+                        <div class="form-question">
+
+                            <label>
+                                <span class="icon">📎</span> Upload Files (Optional)
+                            </label>
+
+                            <div class="drag-drop-zone" id="file-drop-zone">
+
+                                <input type="file" id="file-upload" class="file-hidden-input" multiple>
+
+                                <div class="drop-zone-content">
+
+                                    <i data-lucide="upload-cloud" class="upload-icon"></i>
+
+                                    <p class="upload-text">
+                                        Drag & Drop Project Assets,
+                                        Briefs or Wireframes Here,
+                                        or <span class="browse-link">Browse</span>
+                                    </p>
+
+                                    <div class="uploaded-files-list" id="files-list">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Submit -->
+
+                        <button type="submit" class="btn btn-primary btn-initialize-project magnetic"
+                            data-magnetic-strength="0.12">
+
+                            <span class="btn-text">
+                                [ INITIALIZE PROJECT ]
+                            </span>
+
+                            <span class="btn-glow"></span>
+
+                        </button>
+
+                    </form>
+                    <!-- Loading Progress Overlay -->
+                    <div class="loading-overlay-screen" id="loading-screen" style="display: none;" aria-live="assertive"
+                        role="alert">
+                        <div class="loading-content">
+                            <h2 class="initializing-text">PROJECT INITIALIZING</h2>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill" id="progress-bar-fill"></div>
+                            </div>
+                            <div class="progress-percentage" id="progress-text">0%</div>
+                        </div>
+                    </div>
+
+                    <!-- Success Confirmation Screen -->
+                    <div class="success-overlay-screen" id="success-screen" style="display: none;" aria-live="polite">
+                        <div class="success-content">
+                            <div class="success-checkmark">✔</div>
+                            <h2 class="success-title">PROJECT INITIALIZED</h2>
+                            <p class="success-status">Request Sent Successfully</p>
+                            <p class="success-desc">Our experts are preparing your strategy...</p>
+                            <div class="eta-badge">ETA : 24 Hours</div>
+                            <a href="index.html" class="btn btn-secondary back-home-btn magnetic"
+                                data-magnetic-strength="0.1">
+                                <span>Return to Home</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const form = document.getElementById("project-command-form");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const loading = document.getElementById("loading-screen");
+            const success = document.getElementById("success-screen");
+
+            loading.style.display = "flex";
+
+            emailjs.send("service_ytagdme", "template_75mdwh5", {
+                name: document.getElementById("user-identity").value,
+                email: document.getElementById("user-email").value,
+                phone: document.getElementById("user-phone").value,
+                business: document.getElementById("user-business").value,
+                project: document.getElementById("project-details").value,
+                budget: document.getElementById("project-budget").value,
+                deadline: document.getElementById("project-deadline").value
+            })
+                .then(function () {
+
+                    loading.style.display = "none";
+                    success.style.display = "flex";
+
+                    form.reset();
+
+                })
+                .catch(function (error) {
+
+                    loading.style.display = "none";
+
+                    alert("Failed to send request.");
+
+                    console.log(error);
+
+                });
+
+        });
+    </script>
+    <!-- GSAP Libraries CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Production Modular JS Links -->
+    <script src="js/theme.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+
+</html>

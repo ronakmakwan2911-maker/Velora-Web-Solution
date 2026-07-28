@@ -1,0 +1,411 @@
+/* ==========================================================================
+   VELORA Web Solution - Animations, Keyframes, & Interactive Effects
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Page Preloader (Premium Construction Outline)
+   -------------------------------------------------------------------------- */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity var(--transition-slow) ease, visibility var(--transition-slow) ease;
+}
+
+.preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-logo-container {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.loader-logo-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.loader-outline-path {
+    fill: none;
+    stroke: var(--brand-electric-blue);
+    stroke-width: 2.5px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: drawOutline 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+[data-theme="light"] .loader-outline-path {
+    stroke: var(--brand-purple);
+}
+
+.loader-glow-spot {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 82, 255, 0.45) 0%, transparent 70%);
+    filter: blur(10px);
+    opacity: 0;
+    animation: loaderGlowSweep 1.8s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards;
+}
+
+[data-theme="light"] .loader-glow-spot {
+    background: radial-gradient(circle, rgba(123, 44, 191, 0.3) 0%, transparent 70%);
+}
+
+.loader-progress-track {
+    width: 180px;
+    height: 2px;
+    background: var(--glass-border);
+    border-radius: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.loader-progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: var(--gradient-brand);
+    animation: loaderProgressFill 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes drawOutline {
+    0% { stroke-dashoffset: 400; }
+    100% { stroke-dashoffset: 0; }
+}
+
+@keyframes loaderGlowSweep {
+    0% { opacity: 0; transform: scale(0.6); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+@keyframes loaderProgressFill {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+/* --------------------------------------------------------------------------
+   2. Scroll Progress Bar (Top of Screen)
+   -------------------------------------------------------------------------- */
+.scroll-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.scroll-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--gradient-brand);
+    transition: width 0.1s ease-out;
+}
+
+/* --------------------------------------------------------------------------
+   3. Back To Top Floating Action Button
+   -------------------------------------------------------------------------- */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity var(--transition-medium), transform var(--transition-medium), visibility var(--transition-medium), border-color var(--transition-fast), background var(--transition-fast);
+    box-shadow: var(--shadow-subtle);
+}
+
+.back-to-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top-btn:hover {
+    border-color: var(--brand-electric-blue);
+    background: rgba(var(--bg-glow-rgb), 0.05);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+[data-theme="light"] .back-to-top-btn:hover {
+    border-color: var(--brand-purple);
+}
+
+.back-to-top-btn svg {
+    width: 20px;
+    height: 20px;
+    transition: transform var(--transition-fast);
+}
+
+.back-to-top-btn:hover svg {
+    transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   4. Custom Cursor Follower (Desktop Only)
+   -------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+    .custom-cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--brand-cyan);
+        box-shadow: 0 0 10px var(--brand-cyan);
+        pointer-events: none;
+        z-index: 10000;
+        transform: translate(-50%, -50%);
+        transition: width var(--transition-fast), height var(--transition-fast), background-color var(--transition-fast);
+    }
+    
+    .custom-cursor-follower {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1px solid var(--brand-electric-blue);
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        transition: width var(--transition-fast), height var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+    }
+
+    [data-theme="light"] .custom-cursor { background-color: var(--brand-purple); box-shadow: 0 0 10px var(--brand-purple); }
+    [data-theme="light"] .custom-cursor-follower { border-color: var(--brand-purple); }
+
+    /* Custom Cursor hover scaling transformations */
+    .custom-cursor.hover-expand {
+        width: 24px;
+        height: 24px;
+        background-color: rgba(0, 240, 255, 0.2);
+        box-shadow: none;
+    }
+    .custom-cursor-follower.hover-expand {
+        width: 60px;
+        height: 60px;
+        border-color: var(--brand-cyan);
+        background: rgba(0, 240, 255, 0.03);
+    }
+
+    [data-theme="light"] .custom-cursor.hover-expand { background-color: rgba(123, 44, 191, 0.15); }
+    [data-theme="light"] .custom-cursor-follower.hover-expand { border-color: var(--brand-purple); background: rgba(123, 44, 191, 0.02); }
+
+    .custom-cursor.hover-shrink {
+        width: 4px;
+        height: 4px;
+        opacity: 0.5;
+    }
+    .custom-cursor-follower.hover-shrink {
+        width: 16px;
+        height: 16px;
+        opacity: 0.5;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   5. Accordion Animations (Section 10)
+   -------------------------------------------------------------------------- */
+.faq-accordion-item {
+    margin-bottom: 16px;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+}
+
+.faq-header-btn {
+    width: 100%;
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    text-align: left;
+    transition: background var(--transition-fast);
+    color: var(--text-primary);
+}
+
+.faq-header-btn:hover {
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.faq-header-btn h3 {
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.faq-icon-toggle {
+    width: 20px;
+    height: 20px;
+    color: var(--brand-electric-blue);
+    transition: transform var(--transition-medium);
+}
+
+[data-theme="light"] .faq-icon-toggle {
+    color: var(--brand-purple);
+}
+
+.faq-body-content {
+    height: 0;
+    overflow: hidden;
+    padding: 0 32px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    transition: height var(--transition-medium), padding var(--transition-medium);
+}
+
+/* Open Accordion toggle classes */
+.faq-accordion-item.active .faq-body-content {
+    padding-bottom: 24px;
+}
+
+.faq-accordion-item.active .faq-icon-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-accordion-item.active {
+    border-color: rgba(0, 82, 255, 0.2);
+}
+
+[data-theme="light"] .faq-accordion-item.active {
+    border-color: rgba(123, 44, 191, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   6. Keyframe Animations
+   -------------------------------------------------------------------------- */
+@keyframes flash {
+    0% { opacity: 0.3; filter: brightness(0.8); }
+    100% { opacity: 1; filter: brightness(1.2); }
+}
+
+@keyframes rotatePortal {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes platformWave {
+    0% {
+        transform: rotateX(75deg) translateY(0px) scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: rotateX(75deg) translateY(-8px) scale(1.05);
+        opacity: 0.9;
+    }
+}
+
+@keyframes strokePulse {
+    0% {
+        stroke-dashoffset: 400;
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 0.3;
+    }
+}
+
+@keyframes shimmerSlide {
+    0% {
+        transform: translate(-100px, -100px);
+        opacity: 0;
+    }
+    30% {
+        opacity: 0.7;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translate(100px, 100px);
+        opacity: 0;
+    }
+}
+
+@keyframes orbPulseAnim {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(2.2);
+        opacity: 0;
+    }
+}
+
+@keyframes scrollDotMove {
+    0% {
+        transform: translateY(0);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0.3;
+    }
+}
+
+@keyframes borderGlowSweep {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+
+

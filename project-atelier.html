@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'ATELIER | Architecture & Space Design by VELORA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg-dark: #0a0a0c;
+            --primary: #8a8d9a; /* Slate grey active branding */
+            --text-main: #f5f5f7;
+            --text-secondary: #74767e;
+            --glass-card: rgba(255, 255, 255, 0.01);
+            --glass-border: rgba(255, 255, 255, 0.04);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+        }
+
+        /* Top Return Navbar */
+        .return-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 10, 12, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 16px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+
+        .back-btn:hover {
+            opacity: 0.8;
+        }
+
+        .agency-brand {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .agency-brand span {
+            color: var(--text-main);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 24px 60px 24px;
+            background: radial-gradient(circle at center, rgba(138, 141, 154, 0.05) 0%, transparent 60%);
+            position: relative;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 0; /* Minimalist raw edges */
+            font-size: 0.8rem;
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 24px;
+            max-width: 900px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        .hero h1 span {
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 1.1vw, 1.15rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 0.03em;
+        }
+
+        /* Studio Gallery Grid */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 48px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+
+        .gallery-item {
+            background: var(--glass-card);
+            border: 1px solid var(--glass-border);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            min-height: 380px;
+            transition: border-color 0.3s;
+        }
+
+        .gallery-item:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .item-1 { grid-column: span 8; }
+        .item-2 { grid-column: span 4; }
+        .item-3 { grid-column: span 4; }
+        .item-4 { grid-column: span 8; }
+
+        @media (max-width: 768px) {
+            .gallery-item {
+                grid-column: span 12 !important;
+            }
+        }
+
+        .item-tag {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .item-title {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+
+        .footer-banner {
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            padding: 60px 24px;
+            margin-top: 100px;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .return-nav {
+                padding: 14px 24px;
+            }
+            .back-btn {
+                font-size: 0.85rem;
+            }
+            .agency-brand {
+                font-size: 0.75rem;
+            }
+            .container {
+                padding: 40px 20px;
+            }
+        }
+        @media (max-width: 576px) {
+            .return-nav {
+                padding: 12px 16px;
+            }
+            .agency-brand {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Return Nav -->
+    <div class="return-nav">
+        <a href="index.html" class="back-btn">
+            <i data-lucide="arrow-left"></i> Back to VELORA Home
+        </a>
+        <div class="agency-brand">
+            Case Study Showcase by <span>VELORA</span>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="badge">Architecture Studio</div>
+        <h1>Design & Form meeting <span>Residential Spaces</span></h1>
+        <p>L'Atelier crafts sculptural, structural, and interior volumes that redefine high-end residential living.</p>
+    </section>
+
+    <!-- Studio Portfolio Gallery -->
+    <div class="container">
+        <h2 class="section-title">Selected Works</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item item-1">
+                <div class="item-tag">Residential • London</div>
+                <h3 class="item-title">The Concrete Atrium House</h3>
+            </div>
+            <div class="gallery-item item-2">
+                <div class="item-tag">Conceptual • Switzerland</div>
+                <h3 class="item-title">Mountain Rock Retreat</h3>
+            </div>
+            <div class="gallery-item item-3">
+                <div class="item-tag">Commercial • Paris</div>
+                <h3 class="item-title">Galerie d'Art Moderne</h3>
+            </div>
+            <div class="gallery-item item-4">
+                <div class="item-tag">Residential • Kyoto</div>
+                <h3 class="item-title">Minimalist Bamboo Pavilion</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Banner -->
+    <div class="footer-banner">
+        <p>L'ATELIER — Designed and engineered by VELORA Web Solution.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">&copy; 2026. All rights reserved.</p>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
